@@ -1,5 +1,14 @@
 import React from "react";
-import RestaurantCard, { RestaurantCardProps } from "./RestaurantCard";
+import RestaurantCard from "./RestaurantCard";
+
+type RestaurantCardProps = {
+ imageUrl: string;
+ logoUrl: string;
+ name: string;
+ rating: number;
+ price: string;
+ status: "Open Now" | "Closed";
+};
 
 const FeaturedRestaurants: React.FC = () => {
   const restaurants: RestaurantCardProps[] = [
@@ -56,7 +65,7 @@ const FeaturedRestaurants: React.FC = () => {
 
   return (
     <div className="flex flex-col gap-[88px] justify-center items-center bg-white self-stretch shrink-0 flex-nowrap relative">
-      <span className="flex w-[407px] h-[48px] mt-16 justify-center items-start shrink-0 basis-auto font-['Source_Sans_Pro'] text-[43px] font-bold leading-[48px] text-[#212121] relative text-center whitespace-nowrap">
+      <span className="flex w-[407px] h-[48px] mt-16 justify-center items-start shrink-0 basis-auto     text-[43px] font-bold leading-[48px] text-[#212121] relative text-center whitespace-nowrap">
         Featured Restaurants
       </span>
       <div className="flex w-[1476px] flex-col gap-[64px] items-start shrink-0 flex-nowrap relative">

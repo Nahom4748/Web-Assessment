@@ -4,6 +4,7 @@ import React from 'react';
 import Hero from '../components/Hero';
 import FeaturedRestaurants from '../components/FeaturedRestaurants';
 import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 
 const Home: React.FC = () => {
   return (
@@ -11,6 +12,7 @@ const Home: React.FC = () => {
       <Header />
       <Hero />
       <FeaturedRestaurants />
+      <Footer />
     </div>
   );
 };
